@@ -1,38 +1,145 @@
+/* App.css or create a new CSS file */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: end;
+  margin-right: 25px;
+  padding: 10px 10px ;
+}
+.search-icon{
+  font-size: 20px;
+  /* padding: 10px; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-list {
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards to the next line if they don't fit horizontally */
+  gap: 20px; /* Spacing between cards */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  width: 300px; /* Adjust the width as needed */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  margin: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.card-title {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;/* Add margin for spacing */
+}
+.card-title h2{
+  margin-top: 3px;
+  margin-left: 2px;
+}
+.card-title p{
+  margin-top: auto;
+  /* margin-bottom: 15px; */
+  color: #575555;
 }
 
-.App-link {
-  color: #61dafb;
+.card-type-icon {
+  font-size: 40px;
+  margin-left: 60px;
+  margin-top: 1px;
+  padding: 5px; /*Adjust padding for spacing */
+  background-color: #333; /* Background color for the icon */
+  color: white; /* Icon color */
+  border-radius: 40px; /* Rounded corner for top-right */
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.card-details th,
+.card-details td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+/* Styles for the card status bar */
+.card-status-bar {
+  display: flex;
+  flex-direction: column; /* Place the amount indicators below the color bar */
+  align-items: stretch; /* Stretch the elements to fill the width */
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Styles for the spent bar and its indicators */
+.spent-bar {
+  height: 10px;
+  background: linear-gradient(to right, red 50%, green 50%);
+  position: relative;
+}
+
+/* Styles for the indicators */
+.indicator {
+  position: absolute;
+  font-size: 12px;
+  bottom: -20px; /* Position indicators below the color bar */
+}
+
+/* Styles for the spent indicator */
+.spent-indicator {
+  left: 0;
+  color: red;
+}
+
+/* Styles for the available indicator */
+.available-indicator {
+  right: 0;
+  color: green;
+}
+
+/* Styles for the amount indicators */
+.amount-indicators {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+/* Styles for the red and green amount indicators */
+.red-indicator,
+.green-indicator {
+  /* flex: 1; */
+  /* text-align: center; */
+  
+  background-color: #f5f5f5;
+  padding: 5px 5px  ;
+}
+
+.red-indicator {
+  color: red;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.green-indicator {
+  color: green;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.amount {
+  font-weight: bold;
 }
